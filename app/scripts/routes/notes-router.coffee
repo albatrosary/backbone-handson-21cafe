@@ -14,3 +14,24 @@ define [
   # Function-level strict mode syntax
   'use strict'
   class NotesRouter extends Backbone.Router
+
+    routes:
+      "": "mains"
+      "main": "mains"
+      "show": "lists"
+
+    initialize: ->
+      @collection = new NotesCollections()
+
+      @mview = new MainViews
+        collection: @collection
+
+      @lview = new ListViews
+        collection: @collection
+      return
+
+    mains: ->
+      @mview.render()
+
+    lists: ->
+      @lview.render()

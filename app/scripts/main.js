@@ -25,18 +25,20 @@ require.config({
             'backbone'
           ],
           exports: 'LocalStorage'
-        }
+        },
     },
     paths: {
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone-amd/backbone',
         underscore: '../bower_components/underscore-amd/underscore',
         backboneLocalStorage: '../bower_components/Backbone.localStorage/backbone.localStorage',
+    }
 });
 
 require([
-    'backbone'
-], function (Backbone) {
+    'backbone',
+    './routes/notes-router'
+], function (Backbone, NotesRouter) {
 
     // Google Analytics の設定をする
     // JSエラーが発生した際に呼び出されるイベント
@@ -55,5 +57,7 @@ require([
         alert(message);
     }; 
 
+    // メモ本体とリスト
+    var NotesRouter = new NotesRouter();
     Backbone.history.start();
 });

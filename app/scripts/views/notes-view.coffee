@@ -17,3 +17,9 @@ define [
     el: $ "#main"
 
     template: JST["app/scripts/templates/notes.ejs"]
+
+    initialize: ->
+
+    render: ->
+      $("#notes").html @template
+      this

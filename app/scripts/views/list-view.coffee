@@ -20,6 +20,12 @@ define [
 
     templateElements: JST["app/scripts/templates/list-elements.ejs"]
 
-
+    render: ->
+      $(@el).html @template
+      @collection.each (item) =>
+        $("#notes-list").append @templateElements
+          "title": item.get "title"
+          "contents": item.get "contents"
+      this
 
     

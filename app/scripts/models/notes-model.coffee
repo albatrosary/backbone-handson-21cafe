@@ -11,4 +11,8 @@ define [
   # Function-level strict mode syntax
   "use strict"
   class NotesModel extends Backbone.Model
-
+  	
+  	defaults:
+  	  id: ''
+  	  title: 'title'
+  	  contents: 'contents'

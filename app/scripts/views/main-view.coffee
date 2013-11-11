@@ -25,3 +25,17 @@ define [
     el: $ "#main"
 
     template: JST["app/scripts/templates/main.ejs"]
+
+    initialize: ->
+      # メモ本体
+      @note = new Notes
+        collection: @collection
+
+      return
+      
+    render: ->
+      @$el.html @template
+
+      @note.render()
+
+      this

@@ -13,3 +13,7 @@ define [
   # Function-level strict mode syntax
   "use strict"
   class NotesCollection extends Backbone.Collection
+    
+    model: NotesModel
+    
+    localStorage: new LocalStorage('notes-demo')
