@@ -19,13 +19,19 @@ require.config({
                 'jquery'
             ],
             exports: 'Backbone'
+        },
+        backboneLocalStorage: {
+          deps: [
+            'backbone'
+          ],
+          exports: 'LocalStorage'
         }
     },
     paths: {
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone-amd/backbone',
         underscore: '../bower_components/underscore-amd/underscore',
-    }
+        backboneLocalStorage: '../bower_components/Backbone.localStorage/backbone.localStorage',
 });
 
 require([
