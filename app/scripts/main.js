@@ -36,7 +36,7 @@ require.config({
 
 require([
     'backbone'
-], function (Backbone, NotesRouter) {
+], function (Backbone) {
 
     // Google Analytics の設定をする
     // JSエラーが発生した際に呼び出されるイベント
