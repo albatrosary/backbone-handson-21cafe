@@ -1,0 +1,38 @@
+@import "compass"
+
+// 高さの微調整
+$mainHeight: 100%
+$display-width: 100%
+
+$font-color: gray
+
+$tableLine: 1px solid #CCCCCC
+$pad: 0.2em 0.4em 
+$display-height: 768px - 78px
+$header_height: 56px
+
+@mixin box
+ display: -webkit-box
+ display: -moz-box
+ display: -o-box
+ display: box
+
+@mixin marginZero
+ margin:
+  top: 0px
+  right: 0px
+  left: 0px
+  bottom: 0px
+
+@mixin borderLine
+ position: relative
+ display: block 
+ border: 5px solid rgba(0, 0, 255, 0)
+
+@mixin button-events
+ &:focus, &:hover
+  background:
+   color: #eee
+ &:active
+  background:
+   color: #eee

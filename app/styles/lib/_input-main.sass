@@ -1,0 +1,58 @@
+.main-file
+ font:
+  size: large
+ margin: 0px 5px 0px 5px
+ color: $font-color
+
+.main-select
+ font:
+  size: large
+ margin: 0px 5px 0px 5px
+ border: 1px solid #cccccc
+ color: $font-color
+ +transition(border linear 0.2s, box-shadow linear 0.2s)
+ +border-radius(4px)
+
+.main-text,
+.main-password
+ font:
+  size: large
+ margin: 0px 5px 0px 5px
+ border: 1px solid #cccccc
+ color: $font-color
+ background:
+  color: white
+ padding: 4px 2px
+ +transition(border linear 0.2s, box-shadow linear 0.2s)
+ +border-radius(4px)
+
+.main-textarea
+ font:
+  size: large
+ margin: 0px 5px 0px 5px
+ border: 1px solid #cccccc
+ color: $font-color
+ background:
+  color: white
+ padding: 4px 2px
+ +transition(border linear 0.2s, box-shadow linear 0.2s)
+ +border-radius(4px)
+
+.main-button,
+.main-submit,
+.main-reset,
+.main-checkbox,
+.main-radio
+ @include button-events
+ font:
+  size: large
+ margin: 10px 5px 10px 5px
+ border: 2px solid #ccc
+ color: $font-color
+ padding: 4px 20px
+ background:
+  color: #ffe
+ //+transition(border linear 0.2s, box-shadow linear 0.2s)
+ +border-radius(4px)
+ //+box-shadow(1px 1px 3px rgba(0, 0, 0.75, 0.75)) 
+ //+background(linear-gradient(#fff, #ccc))
